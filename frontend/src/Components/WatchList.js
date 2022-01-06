@@ -7,8 +7,11 @@ import { selectWatchlist } from '../features/movie/movieSlice'
 const WatchList = () => {
     const movies=useSelector(selectWatchlist);
     return (
+      
         <Container>
-        <h4>WatchList</h4>
+          {movies && 
+          <h4>WatchList</h4>
+          }
         <Content>
           {movies &&movies.map((movie,key)=>(
               <Wrap key={key}>
